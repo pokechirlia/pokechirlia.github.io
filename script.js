@@ -1,4 +1,4 @@
-let timer_value = 5;
+let timer_value = 30;
 let holes = document.getElementsByClassName("hole");
 let doggos = document.getElementsByClassName("doggo");
 let scoreElem = document.getElementsByClassName("game_top");
@@ -15,7 +15,7 @@ function startGame()
 
 function startTimer()
 {
-    timer_value = 5;
+    timer_value = 30;
     document.getElementById('timer').style.visibility = 'visible';
     document.getElementById('timer').innerHTML = timer_value +"s";
     
