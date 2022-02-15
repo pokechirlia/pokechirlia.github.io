@@ -1,10 +1,70 @@
 <!DOCTYPE html>
 <html>
-<head> help </head>
+<head> 
+    <title>Whack-a-Cheems</title>
+    <link rel="icon" type="image/png" href="Cheems_icon.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
 <body>
 
-<h1> I'm not sure what I am doing *sob</h1>
+<div id = "game_container">
+<canvas id = "game_canvas"></canvas>
+<div class = "game_top">
+    BEST SCORE: 0
+</div>
+<div id = "game_play">
+    <div class="hole hole1">
+        <img class="doggo" src="Cheems.png" />
+        <img class="pipe" src="pipe.png" />
+    </div>
+    <div class="hole hole2">
+        <img class="doggo" src="Cheems.png" />
+        <img class="pipe" src="pipe.png" />
+    </div>
+    <div class="hole hole3">
+        <img class="doggo" src="Cheems.png" />
+        <img class="pipe" src="pipe.png" />
+    </div>
+    <div class="hole hole4">
+        <img class="doggo" src="Cheems.png" />
+        <img class="pipe" src="pipe.png" />
+    </div>
+    <div class="hole hole5">
+        <img class="doggo" src="Cheems.png" />
+        <img class="pipe" src="pipe.png" />
+    </div>
+    <div class="hole hole6">
+        <img class="doggo" src="Cheems.png" />
+        <img class="pipe" src="pipe.png" />
+    </div>
+    <div class="hole hole7">
+        <img class="doggo" src="Cheems.png" />
+        <img class="pipe" src="pipe.png" />
+    </div>
+    <div class="hole hole8">
+        <img class="doggo" src="Cheems.png" />
+        <img class="pipe" src="pipe.png" />
+    </div>
+    <div class="hole hole9">
+        <img class="doggo" src="Cheems.png" />
+        <img class="pipe" src="pipe.png" />
+    </div>
+</div>
+<div id = "game_bottom">
+    
+    <button onclick="startGame()" id="start_button" >START</button>
+    <div id="timer" style="visibility: hidden;">TIME</div>
+</div>
+</div>
 
+
+
+<script src = "script.js"></script>
 </body>
 
 </html>
