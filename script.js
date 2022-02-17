@@ -4,9 +4,11 @@ let doggos = document.getElementsByClassName("doggo");
 let scoreElem = document.getElementsByClassName("game_top");
 let bestScore = 0;
 let score = 0;
+var bonkSound;
 
 function startGame()
 {
+    bonkSound = new sound("bonk_sound.mp3")
     document.getElementById('start_button').style.visibility = 'hidden';
     startTimer();
     startCheems();
@@ -115,6 +117,7 @@ function cheemsDown(atHole)
 
 function bonk(atHole)
 {
+    bonkSound.play();
     doggos[atHole].src = "bonk.png";
     doggos[atHole].style.bottom = "35%";
     let timeOut = setTimeout(function(){
@@ -137,5 +140,19 @@ function hideAllCheems()
     }
 }
 
+function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+      this.sound.play();
+    }
+    this.stop = function(){
+      this.sound.pause();
+    }
+  }
 
 
